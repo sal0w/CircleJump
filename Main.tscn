@@ -11,3 +11,5 @@ position = Vector2( 1, 1 )
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2( 0, -200 )
 current = true
+smoothing_enabled = true
+smoothing_speed = 10.0
