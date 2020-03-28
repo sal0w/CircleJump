@@ -12,5 +12,12 @@ Trying out Godot from the tutorial by **[KidsCanCode](https://www.youtube.com/ch
 	* Aspect -> keep
 * Goto Submenu Pointing -> Emulate touch from mouse
 
-## Result at end of Video2
+## Results
+
+**Video 1**
+
+![](video1.gif)
+
+**Video 2**
+
 ![Not Found](video2.gif)
