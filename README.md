@@ -13,4 +13,4 @@ Trying out Godot from the tutorial by **[KidsCanCode](https://www.youtube.com/ch
 * Goto Submenu Pointing -> Emulate touch from mouse
 
 ## Result at end of Video2
-![](Video2.gif)
+![Not Found](video2.gif)
