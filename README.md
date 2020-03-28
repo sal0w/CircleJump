@@ -11,3 +11,6 @@ Trying out Godot from the tutorial by **[KidsCanCode](https://www.youtube.com/ch
 	* Orientation -> Portrait
 	* Aspect -> keep
 * Goto Submenu Pointing -> Emulate touch from mouse
+
+## Result at end of Video2
+![](Video2.gif)
