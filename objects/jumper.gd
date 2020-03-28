@@ -1,6 +1,7 @@
 extends Area2D
 
 signal captured
+signal died
 
 onready var trail = $Trail/Points
 
@@ -35,6 +36,7 @@ func _physics_process(delta):
 		position += velocity * delta
 		
 func die():
+	emit_signal("died")
 	target = null
 	queue_free()
 
