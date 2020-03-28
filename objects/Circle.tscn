@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://images/circle1_n.png" type="Texture" id=1]
 [ext_resource path="res://objects/jumper.shader" type="Shader" id=2]
 [ext_resource path="res://objects/Circle.gd" type="Script" id=3]
+[ext_resource path="res://fonts/Xolonium-Regular.ttf" type="DynamicFontData" id=4]
 
 [sub_resource type="ShaderMaterial" id=1]
 shader = ExtResource( 2 )
@@ -11,7 +12,7 @@ shader_param/color = Color( 0.384314, 0.854902, 0.117647, 1 )
 [sub_resource type="CircleShape2D" id=2]
 radius = 135.564
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=3]
 resource_name = "Capture"
 length = 0.5
 tracks/0/type = "value"
@@ -51,8 +52,7 @@ tracks/2/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.537255 ) ]
 }
 
-[sub_resource type="Animation" id=3]
-resource_name = "implode"
+[sub_resource type="Animation" id=4]
 length = 0.4
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:scale")
@@ -79,6 +79,10 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
+[sub_resource type="DynamicFont" id=5]
+size = 64
+font_data = ExtResource( 4 )
+
 [node name="Circle" type="Area2D"]
 script = ExtResource( 3 )
 
@@ -100,5 +104,22 @@ shape = SubResource( 2 )
 [node name="OrbitPosition" type="Position2D" parent="Pivot"]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/Capture = SubResource( 4 )
-anims/implode = SubResource( 3 )
+anims/Capture = SubResource( 3 )
+anims/implode = SubResource( 4 )
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -22.5
+margin_top = -39.0
+margin_right = 22.5
+margin_bottom = 39.0
+custom_fonts/font = SubResource( 5 )
+text = "1"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
