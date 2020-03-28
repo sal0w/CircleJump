@@ -1,0 +1,56 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://fonts/font_res.tres" type="DynamicFont" id=1]
+[ext_resource path="res://fonts/Xolonium-Regular.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+font_data = ExtResource( 2 )
+
+[node name="HUD" type="CanvasLayer"]
+
+[node name="ScoreBox" type="MarginContainer" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -118.0
+custom_constants/margin_right = 20
+custom_constants/margin_top = 20
+custom_constants/margin_left = 20
+custom_constants/margin_bottom = 20
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScoreBox"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 460.0
+margin_bottom = 98.0
+alignment = 2
+
+[node name="Label" type="Label" parent="ScoreBox/HBoxContainer"]
+margin_left = 205.0
+margin_top = 19.0
+margin_right = 301.0
+margin_bottom = 58.0
+custom_fonts/font = SubResource( 1 )
+text = "Score"
+
+[node name="Score" type="Label" parent="ScoreBox/HBoxContainer"]
+margin_left = 305.0
+margin_right = 440.0
+margin_bottom = 78.0
+custom_fonts/font = ExtResource( 1 )
+text = "100"
+
+[node name="Label" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 14.0
+custom_fonts/font = ExtResource( 1 )
+text = "Message"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
