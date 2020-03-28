@@ -42,6 +42,10 @@ func check_orbits():
 	if abs($Pivot.rotation - orbit_start) > 2 * PI:
 		current_orbits -= 1
 		$Label.text = str(current_orbits)
+		if current_orbits <=0:
+			jumper.die()
+			jumper = null
+			implode()
 		orbit_start = $Pivot.rotation
 	
 func implode():

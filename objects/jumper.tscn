@@ -31,3 +31,4 @@ polygon = PoolVector2Array( 20.3125, -0.132759, -21.0186, -20.6596, -19.909, 20.
 z_index = -1
 gradient = SubResource( 2 )
 [connection signal="area_entered" from="." to="." method="_on_jumper_area_entered"]
+[connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]

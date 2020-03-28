@@ -33,3 +33,12 @@ func _physics_process(delta):
 		transform = target.orbit_position.global_transform
 	else:
 		position += velocity * delta
+		
+func die():
+	target = null
+	queue_free()
+
+
+func _on_VisibilityNotifier2D_screen_exited():
+	if !target:
+		die()
